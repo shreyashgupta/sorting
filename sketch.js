@@ -5,16 +5,19 @@ let btn;
 let h;
 let turn=0;
 let radio;
-let war;
+let war1,war2;
 function setup() {
   let cnv=createCanvas(windowWidth,windowHeight/1.3);
   cnv.position(0,windowHeight/2-height/2)
   rectMode(CENTER);
   slider=createSlider(2,150,10);
   slider.changed(reset);
-  war=createElement("h4","*Allow sorting to complete before altering anything*");
-  war.style("color",'red');
-  war.style("position",'absolute');
+  war1=createElement("h4","*Allow sorting to complete");
+  war1.style("color",'red');
+  war1.position(10,10);
+  war2=createElement("h4"," before altering anything*");
+  war2.style("color",'red');
+  war2.position(25,25);
   radio=createRadio();
   radio.changed(change);
   let r1=radio.option("Bubble Sort",1);
