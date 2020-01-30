@@ -11,17 +11,17 @@
       pi++;
     }
   }
-  states[pi]=1;
    await swap(arr,pi,r);
-  states[pi]=0;
+  states[pi]=1;
   return pi;
 }
 async function swap(q,a,b)
 {
-  await sleep(50);
   let temp=q[a];
   q[a]=q[b];
+  await sleep(25);
   q[b]=temp;
+  await sleep(25);
 }
 async function qs(arr,l,r)
 {

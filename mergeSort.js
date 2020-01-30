@@ -1,6 +1,6 @@
 async function merge(l,m,r)
 { 
-  await sleep(50);
+  await sleep(20);
   let l1=m-l+1;
   let l2=r-m;
   let L=[];
@@ -16,11 +16,13 @@ async function merge(l,m,r)
   {
     if(L[i]<=R[j])
     {
+      await sleep(10);
       data[k]=L[i]
       i++;
     }
     else
     {
+      await sleep(10);
       data[k]=R[j];
       j++;
     }
@@ -28,12 +30,14 @@ async function merge(l,m,r)
   }
   while(i<l1)
   {
+    await sleep(10);
     data[k]=L[i];
     i++;
     k++;
   }
   while(j<l2)
   {
+    await sleep(10);
     data[k]=R[j];
     j++;
     k++;
